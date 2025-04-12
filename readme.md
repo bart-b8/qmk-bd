@@ -1,3 +1,13 @@
+# Personal README
+
+## Setup environement
+
+The qmk cli can be installed for the user system wide. So lets run the following outside the virtual env.
+
+```
+python3 -m pip install --user qmk
+```
+
 # Quantum Mechanical Keyboard Firmware
 
 [![Current Version](https://img.shields.io/github/tag/qmk/qmk_firmware.svg)](https://github.com/qmk/qmk_firmware/tags)
