@@ -8,6 +8,23 @@ The qmk cli can be installed for the user system wide. So lets run the following
 python3 -m pip install --user qmk
 ```
 
+Install [support for connecting USB devices in WSL with USBIPD-WIN project](https://learn.microsoft.com/en-us/windows/wsl/connect-usb)
+
+### Setting environement defaults
+
+```bash
+qmk config user.keyboard=splitkb/aurora/corne/rev1
+qmk config user.keymap=bart-b8
+```
+
+Compile with `CONVERT_TO=liatris` 
+
+```bash
+qmk compile -e CONVERT_TO=liatris
+```
+
+Then the .uf2 file is available to copy to the drive in bootloader mode.
+
 # Quantum Mechanical Keyboard Firmware
 
 [![Current Version](https://img.shields.io/github/tag/qmk/qmk_firmware.svg)](https://github.com/qmk/qmk_firmware/tags)
