@@ -7,6 +7,10 @@ The qmk cli can be installed for the user system wide. So lets run the following
 ```
 python3 -m pip install --user qmk
 ```
+OR
+```
+sudo pacman -S qmk
+```
 
 Install [support for connecting USB devices in WSL with USBIPD-WIN project](https://learn.microsoft.com/en-us/windows/wsl/connect-usb)
 
@@ -14,7 +18,7 @@ Install [support for connecting USB devices in WSL with USBIPD-WIN project](http
 
 ```bash
 qmk config user.keyboard=splitkb/aurora/corne/rev1
-qmk config user.keymap=bart-b8
+qmk config user.keymap=bart_b8
 ```
 
 Compile with `CONVERT_TO=liatris` 
