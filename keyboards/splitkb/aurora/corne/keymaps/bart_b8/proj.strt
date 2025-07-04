@@ -1,0 +1,10 @@
+# Should run each time an interactive shell is started:
+set_env () {
+  PS1="("proj:qmk_km_bd") ${PS1:-}"
+  export PS1
+}
+
+# Runs only the first time
+start () {
+  true
+}
