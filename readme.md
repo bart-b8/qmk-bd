@@ -14,6 +14,15 @@ sudo pacman -S qmk
 
 Install [support for connecting USB devices in WSL with USBIPD-WIN project](https://learn.microsoft.com/en-us/windows/wsl/connect-usb)
 
+Clone firmware with `qmk setup bart_b8/qmk_bd`
+
+Compile with: 
+```
+qmk compile -kb splitkb/aurora/corne -km bart_b8
+```
+
+Or make it easier with the following:
+
 ### Setting environement defaults
 
 ```bash
@@ -27,7 +36,21 @@ Compile with `CONVERT_TO=liatris`
 qmk compile -e CONVERT_TO=liatris
 ```
 
+After adding `CONVERT_TO=liatris` to rules.mk, the command `qmk compile` is enough.
+
 Then the .uf2 file is available to copy to the drive in bootloader mode.
+
+## Maintainance
+
+The `master` branch tracks `upstream/master`.  
+The commits for my personal keymaps are made on branch `rel_bd`
+
+This makes it ease to include updates made upstream in my peronal firmware.
+
+1. `git checkout master`
+1. `git pull upstream`
+1. `git push`
+1. `git rebase master rel_bd`
 
 # Quantum Mechanical Keyboard Firmware
 
